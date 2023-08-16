@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    .h1{
+      text-align: center;
+      text-transform: capitalize;
+      text-decoration: solid;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var a=confirm("Are you ready to play?");
+    if(a){
+      const cp=["rock" ,"scissor","paper"];
+      var cpc=cp[Math.floor(Math.random()*cp.length)];
+      console.log(cpc);
+      var b=prompt("Enter your move");
+      b= b.trim();
+      b=b.toLowerCase();
+      if(b === "rock" || b=== "scissor" || b=== "paper"){
+        
+      
+        if(cpc === b){
+          confirm("Match Tie!!");
+        }
+        else if(b=== "paper" && cpc=== "rock"){
+          confirm("Yeah you Win!!");
+        }
+        else if(b=== "scissor" && cpc=== "paper"){
+          confirm("Yeah you Win!!");
+        }
+        else if(b=== "rock" && cpc=== "scissor"){
+          confirm("Yeah you Win!!");
+        }
+        else{
+          confirm("Oh No you loss!!");
+        }
+
+      }
+      else{
+        alert("Enter Valid Move");
+      }
+    var pla=confirm("Do you want play again");
+    if(pla){
+      location.reload();
+    }
+    else{
+      alert("See you soon");
+    }
+
+    }
+    else{
+      confirm("Ok Thank you!!!");
+    }
+  </script>
+  <h1 class="h1"> Welcome To Play "Rock Paper and scissor"</h1>
+</body>
+</html>
